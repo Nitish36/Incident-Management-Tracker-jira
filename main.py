@@ -49,7 +49,8 @@ def push_data():
             "Status": fields["statusCategory"]["name"],
             "Issue Date": fields["created"],
             "Priority": fields["priority"]["name"],
-            "Assigned Person": fields["assignee"]["emailAddress"] if fields["assignee"] else "",
+            "Assigned Person": "Assigned Person": fields["assignee"].get("emailAddress", "") if fields["assignee"] else "",
+
         })
 
     return issues
