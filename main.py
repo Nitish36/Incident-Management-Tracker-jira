@@ -140,7 +140,6 @@ def read_write():
         worksheet = sh.worksheet(TAB_NAME)
         set_with_dataframe(worksheet, final_data)
         print("Data loaded successfully!! Have fun!!")
-        print(df)
     except Exception as e:
         print(f"Error: {e}")
     finally:
