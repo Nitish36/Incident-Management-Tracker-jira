@@ -138,7 +138,7 @@ def read_write():
         gc = gspread.service_account(filename=credentialsPath)
         sh = gc.open(GSHEET_NAME)
         worksheet = sh.worksheet(TAB_NAME)
-        set_with_dataframe(worksheet, df)
+        set_with_dataframe(worksheet, final_data)
         print("Data loaded successfully!! Have fun!!")
         print(df)
     except Exception as e:
